@@ -1,0 +1,33 @@
+version: "3.1"
+
+rules:
+
+- rule: responder saudacao
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: responder despedida
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: listar moedas
+  steps:
+    - intent: listar_moedas
+    - action: action_listar_moedas
+
+- rule: converter moeda
+  steps:
+    - intent: converter_moeda
+    - action: action_converter_moeda
+
+- rule: informar valor
+  steps:
+    - intent: informar_valor
+    - action: action_converter_moeda
+
+- rule: informar moeda
+  steps:
+    - intent: informar_moeda
+    - action: action_converter_moeda

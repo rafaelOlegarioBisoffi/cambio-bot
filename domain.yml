@@ -1,0 +1,51 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - converter_moeda
+  - listar_moedas
+  - informar_valor
+  - informar_moeda
+
+entities:
+  - moeda_origem
+  - moeda_destino
+  - valor
+
+slots:
+  moeda_origem:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+  moeda_destino:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+  valor:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+  pergunta_pendente:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+responses:
+  utter_greet:
+    - text: "Ola! Eu sou o CambioBot. Posso converter moedas para voce. Como posso ajudar?"
+
+  utter_goodbye:
+    - text: "Ate mais! Boas conversoes!"
+
+actions:
+  - action_converter_moeda
+  - action_listar_moedas
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

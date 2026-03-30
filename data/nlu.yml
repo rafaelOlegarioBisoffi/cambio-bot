@@ -1,0 +1,110 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - oi
+    - ola
+    - e ai
+    - bom dia
+    - boa tarde
+    - boa noite
+    - hey
+    - opa
+
+- intent: goodbye
+  examples: |
+    - tchau
+    - ate mais
+    - ate logo
+    - falou
+    - bye
+    - adeus
+    - ate a proxima
+
+- intent: converter_moeda
+  examples: |
+    - converta [100](valor) [dolares](moeda_origem) para [reais](moeda_destino)
+    - converter [50](valor) [euros](moeda_origem) em [dolares](moeda_destino)
+    - quanto da [200](valor) [reais](moeda_origem) em [euros](moeda_destino)
+    - quero converter [1000](valor) [dolares](moeda_origem) para [reais](moeda_destino)
+    - [500](valor) [reais](moeda_origem) em [dolares](moeda_destino)
+    - quanto vale [100](valor) [euros](moeda_origem) em [reais](moeda_destino)
+    - me converte [250](valor) [dolares](moeda_origem) para [euros](moeda_destino)
+    - [75](valor) [libras](moeda_origem) para [reais](moeda_destino)
+    - quanto e [100](valor) [USD](moeda_origem) em [BRL](moeda_destino)
+    - converter [300](valor) [BRL](moeda_origem) para [USD](moeda_destino)
+    - [50](valor) [EUR](moeda_origem) em [BRL](moeda_destino)
+    - quero saber quanto da [100](valor) [dolares](moeda_origem) em [reais](moeda_destino)
+    - converta [1000](valor) [ienes](moeda_origem) para [reais](moeda_destino)
+    - quanto fica [200](valor) [dolares](moeda_origem) em [reais](moeda_destino)
+    - [100](valor) [dolares](moeda_origem) para [euros](moeda_destino)
+    - quero converter moeda
+    - quero fazer uma conversao
+    - converter moeda
+    - me ajuda a converter
+
+- intent: listar_moedas
+  examples: |
+    - quais moedas voce aceita
+    - lista de moedas
+    - quais moedas estao disponiveis
+    - moedas suportadas
+    - que moedas posso usar
+    - quais sao as moedas
+
+- intent: informar_valor
+  examples: |
+    - [100](valor)
+    - [200](valor)
+    - [50](valor)
+    - [1000](valor)
+    - o valor e [500](valor)
+    - [75](valor)
+
+- intent: informar_moeda
+  examples: |
+    - dolares
+    - reais
+    - euros
+    - libras
+    - ienes
+    - USD
+    - BRL
+    - EUR
+    - GBP
+    - JPY
+    - a moeda e dolares
+    - de reais
+    - para euros
+    - dolar
+    - real
+    - euro
+
+- synonym: USD
+  examples: |
+    - dolares
+    - dolar
+    - dollar
+    - dollars
+
+- synonym: BRL
+  examples: |
+    - reais
+    - real
+
+- synonym: EUR
+  examples: |
+    - euros
+    - euro
+
+- synonym: GBP
+  examples: |
+    - libras
+    - libra
+
+- synonym: JPY
+  examples: |
+    - ienes
+    - iene
+    - yen
